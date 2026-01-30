@@ -18,7 +18,19 @@ op.innerHTML = `Dist.between pts (${x1},${y1}) (${x2},${y2}) is ${d}`;
       1) Create variables and retrieve the information from the text inputs you created in Challenge 1.
       2) Perform the necessary calculations
       3) Display the results in the appropriate element
-*/
 
+*/
+function interest(){
+ let p = parseFloat(document.getElementById("p").value);
+ let r = parseFloat(document.getElementById("r").value);
+ let n = parseFloat(document.getElementById("n").value);
+ let t = parseFloat(document.getElementById("t").value);
+ let output = document.getElementById("output2");
+
+ let a = p * Math.pow(1 +(r/100)/n, n*t);
+ //a = a.toFixed(2);
+
+ output.innerHTML =`An investment of $${p} at ${r}% annual interest will grow to $${a.tofixed(2)} afer ${t} years.`;
+}
 
 
