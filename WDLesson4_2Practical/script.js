@@ -13,6 +13,22 @@ function name(){
 */
 
 /* Challenge 2:  Create the function for Challenge 1 scenario */
+function Area(){
+        let length = parseFloat(document.getElementById("length").value);
+        let width  = parseFloat(document.getElementById("width").value);
+        let output = document.getElementById("output");
+        let a =length * width;
+        let message = "";
+        a = length * width;
+        
+
+        if (length <= 0 || width <=0){
+          message="Area is.";
+        }else{
+          message="Inappropriate measurement.";
+        }
+        output.innerHTML = message;
+      }
 
 
 
