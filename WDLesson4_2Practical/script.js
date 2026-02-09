@@ -14,17 +14,18 @@ function name(){
 
 /* Challenge 2:  Create the function for Challenge 1 scenario */
 function Area(){
-        let length = parseFloat(document.getElementById("length").value);
-        let width  = parseFloat(document.getElementById("width").value);
+        let l = parseFloat(document.getElementById("length").value);
+        let w  = parseFloat(document.getElementById("width").value);
         let output = document.getElementById("output");
-        let a =length * width;
         let message = "";
-        a = length * width;
+        let A =1 * w;
+        
         
 
         if (length <= 0 || width <=0){
-          message="Area is.";
+          message=`Area of rectangle with width ${w} and length ${l} is ${A} sq.units .`;
         }else{
+          let A= 1 * w;
           message="Inappropriate measurement.";
         }
         output.innerHTML = message;
@@ -37,5 +38,28 @@ function Area(){
 2) You will need to write HTML as part of the output.  
    For example, output.innerHTML = `<input src="pic.png">` would place the image in the <div>*/
 function pet(){
+        let a = document.getElementById("animal").value;
+        let e  = document.getElementById("emotion").value;
+        let output = document.getElementById("output");
+        let filename = "";
+        if (a == "Bear" && e == "Funny"){
+          filename = "funnyBear.jpg";
+        }
+        if (a == "Bear" && e == "Sad"){
+          filename = "funnyBear.jpg";
+        }
+        if (a == "Dog" && e == "Funny"){
+          filename = "funnyBear.jpg";
+        }
+        if (a == "Dog" && e == "Sad"){
+          filename = "sadBear.jpg";
+        }
+        if (a == "Cat" && e == "Funny"){
+          filename = "FunnyCat.jpg";
+        }
+        if (a == "Car" && e == "Sad"){
+          filename = "sadCat.jpg";
+        }
+        output.innerHTML = `<img src="${filename}">`;
+      }
 
-}
