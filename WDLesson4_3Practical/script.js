@@ -13,4 +13,31 @@ Guideline:
 
 Use past examples, classwork and practicals to assist you in completing this practical.
 */
+function BMI(){
+       let h = parseFloat(document.getElementById("h").value);
+       let w = parseFloat(document.getElementById("w").value);
+       let op = document.getElementById("output");
+       let status = "";
+       let filename="";
 
+       let bmi = 703 * w / (h ** 2)
+
+       if(bmi< 18.5){
+              status = "Underweight";
+              filename = "underweight.png";
+       }else if (bmi >= 18.5 && bmi < 25){
+              status = "Healthy weight";
+              filename = "healthyweight.png";
+       }else if (bmi >= 25 && bmi < 30){
+              status = "Overweight";
+              filename = "overweight.png";
+       }else if (bmi >= 30){
+              status = "Obese";
+              filename = "obeseweight.png";
+       }
+
+       op.innerHTML = `<img src="${filename}"><br> You are ${status}`;
+
+
+
+}
