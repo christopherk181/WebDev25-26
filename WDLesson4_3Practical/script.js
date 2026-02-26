@@ -22,7 +22,7 @@ function BMI(){
 
        let bmi = 703 * w / (h ** 2)
 
-       if(bmi< 18.5){
+       if(bmi < 18.5){
               status = "Underweight";
               filename = "underweight.png";
        }else if (bmi >= 18.5 && bmi < 25){
@@ -31,7 +31,8 @@ function BMI(){
        }else if (bmi >= 25 && bmi < 30){
               status = "Overweight";
               filename = "overweight.png";
-       }else if (bmi >= 30){
+       }
+       else{
               status = "Obese";
               filename = "obeseweight.png";
        }
