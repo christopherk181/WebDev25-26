@@ -15,7 +15,7 @@ function name(){
 /* Challenge 2:  Create the function for Challenge 1 scenario */
 function Area(){
         let l = parseFloat(document.getElementById("length").value);
-        let w  = parseFloat(document.getElementById("width").value);
+        let w = parseFloat(document.getElementById("width").value);
         let output = document.getElementById("output");
         let message = "";
         let A =1 * w;
