@@ -15,14 +15,15 @@ Year 3: $xxxxxx
 Year N: $xxxxxx
 */
 function calculateCompoundInterest(){
-    let principal = parseFloat(document.getElementById("principal").value);
+    let principal = parseFloat(document.getElementById("Principal").value);
     let rate = parseFloat(document.getElementById("rate").value);
-    let years = parseInt(document.getElementById("years").value);
+    let year = parseInt(document.getElementById("year").value);
     let n = parseInt(document.getElementById("n").value);
     let build = "";
 
-    for(let t = 1; t <= years; t+=1){
-        let a = principal * rate
-        build += `years ${t}: $ ${a} <br>`;
+    for(let t = 0; t <= year; t+=1){
+        let A = principal * (1 + rate / n) ** (n * t);
+        build += `year ${t}: $ ${A.toFixed(2)} <br>`;
     }
+   output.innerHTML = build;
 }
