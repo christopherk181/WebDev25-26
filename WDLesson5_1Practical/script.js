@@ -19,7 +19,7 @@ function calculateCompoundInterest(){
     let rate = parseFloat(document.getElementById("rate").value);
     let year = parseInt(document.getElementById("year").value);
     let n = parseInt(document.getElementById("n").value);
-    let build = "";
+    let build = `<h2> Yearly Balances </h2>`;
 
     for(let t = 0; t <= year; t+=1){
         let A = principal * (1 + rate / n) ** (n * t);
