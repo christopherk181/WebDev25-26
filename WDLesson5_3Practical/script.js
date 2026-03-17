@@ -11,6 +11,14 @@
 */
 
 function balance(){
+    let principal = parseFloat(document.getElementById("Principal").value);
+    let rate = parseFloat(document.getElementById("rate").value);
+    let year = parseInt(document.getElementById("year").value);
+    let n = parseInt(document.getElementById("n").value);
+    let build = `<table>`;
+
+
+
 
 
 }
