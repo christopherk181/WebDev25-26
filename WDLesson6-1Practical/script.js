@@ -35,41 +35,39 @@ function init(){
   
 
   //Challenge 4:  Build cards for the meats. Place the build in the meat container. 
-    for(let i = 0; i < meat_images.length; index++){
+    for(let i = 0; i < meat_images.length; i++){
     build +=`<div class = "card">
-                        <h3>${meat_titles[index]}</h3>
-                           <img class= "food" src="images/${meat_images[index]}">
-                             </a>
-                      <h4> $${meat_prices[index]} </h4>
+                        <h3>${meat_titles[i]}</h3>
+                           <img class= "food" src="images/${meat_images[i]}">
+                      <h4> $${meat_prices[i]} </h4>
                       </div>`;
 }
- m.innerHTML = build;
-}
+  m.innerHTML = build;
+
 
   //Challenge 5:  Build cards for the seafoods. Place the build in the seafood container.
   build =``;
-   for(let i = 0; i < seafood_images.length; index++){
+   for(let i = 0; i < seafood_images.length; i++){
     build +=`<div class = "card">
-                        <h3>${seafood_titles[index]}</h3>
-                           <img class= "food" src="images/${seafood_images[index]}">
-                             </a>
-                      <h4> $${seafood_prices[index]} </h4>
+                        <h3>${seafood_titles[i]}</h3>
+                           <img class= "food" src="images/${seafood_images[i]}">
+                      <h4> $${seafood_prices[i]} </h4>
                       </div>`;
 }
- s.innerHTML = build;
+  s.innerHTML = build;
+
 
 
   //Challenge 6:  Build cards for the desserts. Place the build in the dessert container.
  build = ``;
- for(let i = 0; i < dessert_images.length; index++){
+ for(let i = 0; i < dessert_images.length; i++){
     build +=`<div class = "card">
-                        <h3>${dessert_titles[index]}</h3>
-                           <img class= "food" src="images/${dessert_images[index]}">
-                             </a>
-                      <h4> $${dessert_prices[index]} </h4>
+                        <h2>${dessert_titles[i]}</h2>
+                           <img class= "food" src="images/${dessert_images[i]}">
+                      <h3> $${dessert_prices[i]} </h3>
                       </div>`;
 }
- d.innerHTML = build;
-
+  d.innerHTML = build;
+}
 
 
