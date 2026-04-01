@@ -10,7 +10,7 @@ function BHS(){
   output.innerHTML = `
     <div class = "card">
      <h2>${school.name}</h2>
-     <img src = "${school.image}"="${school.name}">
+     <img src = "${school.image}">
      <p>${school.address}</p>
     </div>`;
 }
@@ -18,25 +18,26 @@ function artist(){
   //Challenge 2: Fill the JSON below with the specified information for your favorite artist
   let artist = {
     "name":"Kanye West",
-    "image":"https://hips.hearstapps.com/hmg-prod/images/kanye-west-attends-the-2020-vanity-fair-oscar-party-hosted-news-photo-1742326400.pjpeg?crop=0.668xw:1.00xh;0.141xw,0",
+    "image":"https://hips.hearstapps.com/hmg-prod/images/kanye-west-attends-the-2020-vanity-fair-oscar-party-hosted-news-photo-1742326400.pjpeg",
     "album":"Graduation",
-    "url":"https://yeezy.com/?srsltid=AfmBOoqeqCcoOuzyhpNbusu7SxdFdnow25TujBWhDBTBDLdgJsKiM9RE",
+    "url":"https://yeezy.com/?srsltid=AfmBOoqeqCcoOuzyhpNbusu7SxdFdnow25TujBWhDBTBDLdgJsKiM9RE"
   };
-  let output = document.getElementById("output");
-  build = "";
-  build += `<div>
-              <h2>${artist.name}</h2>
-              <p>${artist.album}</p>
-              <img src = "${artist.image}">
-              <br>
-              <a href = "${artist.url}"target = blank></a>
-            </div>`
-  output.innerHTML = build;
-
+ 
 
   //Challenge 3: Build a card for the information in the JSON. Make the image a hyperlink to the url provided.
 
+ let output = document.getElementById("output");
+ let build = "";
+  build += `<div class="card">
+              <h2>${artist.name}</h2>
+              <p>${artist.album}</p>
+              <a href = "${artist.url}"target ="_blank">
+                <img src = "${artist.image}">
+              </a>
+            </div>`;
+  output.innerHTML = build;
 }
+
 
 
 
