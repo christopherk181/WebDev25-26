@@ -21,7 +21,7 @@ let meats = [
   { title: "Steak", image: "steak.jpg", price: 15.99 }
 ];
 // Challenge 5: Create an array of JSON where each JSON contains the name, an image source and price for each Seafood item.  
-let Seafoods = [
+let seafoods = [
   { title: "Clams", image: "clams.jpg", price: 8.99 },
   { title: "Crabs", image: "crabs.jpg", price: 12.99 },
   { title: "lobster", image: "lobster.png", price: 30.59 },
@@ -34,7 +34,7 @@ let Seafoods = [
 let desserts = [
   { title: "Flan", image: "flan.jpg", price: 4.15 },
   { title: "Passion Berry", image: "passionberry.jpg", price: 3.99 },
-  { title: "oreocup", image: "oreocup.jpg", price: 2.99 },
+  { title: "oreocup", image: "oreocup.jpg", price: 2.99 }
 ];
 function showMeats(){
   let title = document.getElementById("title");
@@ -45,6 +45,13 @@ function showMeats(){
      Make the title a heading(h3), place the image in the middle, and make the price a paragraph.
      2) Change the title to "Meats". 
   */
+ for(let i = 0; i < meats.length; i++){
+  build+=`<div class= "card">
+              <h3>${meats[i].title}</h3>
+              <img src="images/${meats[i].image}">
+              <p>$${meats[i].price}</p>
+            </div>`;
+ }
 
 
   output.innerHTML = build;
@@ -52,7 +59,7 @@ function showMeats(){
   title.innerHTML = "Meats";
 }
 
-function showSeafood(){
+function showSeafoods(){
   let title = document.getElementById("title");
   let output = document.getElementById("output");
   let build = ``;
@@ -61,11 +68,18 @@ function showSeafood(){
      Make the title a heading(h3), place the image in the middle, and make the price a paragraph.   
      2) Change the title to "Seafood".
   */
+ for(let i = 0; i < seafoods.length; i++){
+  build+=`<div class= "card">
+              <h3>${seafoods[i].title}</h3>
+              <img src="images/${seafoods[i].image}">
+              <p>$${seafoods[i].price}</p>
+            </div>`;
+ }
 
 
   output.innerHTML = build;
   // Write the title "Seafood" in the div with id 'title'
-
+  title.innerHTML = "Seafoods";
 }
 
 function showDesserts(){
@@ -77,9 +91,16 @@ function showDesserts(){
      Make the title a heading(h3), place the image in the middle, and make the price a paragraph.
      2) Change the title to "Desserts".
   */
+ for(let i = 0; i < desserts.length; i++){
+  build+=`<div class= "card">
+              <h3>${desserts[i].title}</h3>
+              <img src="images/${desserts[i].image}">
+              <p>$${desserts[i].price}</p>
+            </div>`;
+ }
 
 
-  output.innerHTML = build;
+  output.innerHTML = title;
   // Write the title "Desserts" in the div with id 'title'
-
+  title.innerHTML = "Desserts";
 }
