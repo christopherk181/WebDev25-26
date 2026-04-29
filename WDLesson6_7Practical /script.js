@@ -1,7 +1,7 @@
 let data, info;
 
 async function init(){   
-  let link = "311.json"; //let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1000";
+  let link = "mvc.json"; //let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1000";
   info = await fetch(link);
   data = await info.json();
   
@@ -90,13 +90,9 @@ function searchZip(){
 // Challenge 4: Create an event handler (function) to filter the 311 Service Request by complaint type.
 
 function searchcomplaint(){
-  let complaint= document.getElementById("complaint").value;
-  let output = document.getElementById("output");
+  let issue= document.getElementById("complaint").value;
+  let output = document.getElementById("output").value;
   let result = document.getElementById("result");
-
-   let build = "";
-  let ct = 0;
-
 
   async function init(){   
   let link = "311.json"; //let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1000";
