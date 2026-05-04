@@ -30,7 +30,7 @@ function filterByBorough(){
   let output = document.getElementById("output");
   let borough = document.getElementById("borough").value;
   let result = document.getElementById("result");
-  
+
   let build = "";
   let ct = 0;
 
@@ -38,13 +38,13 @@ function filterByBorough(){
     let crash = data[i];
     if(crash.borough == borough){
       build += `<div class="fitted card">
-                    <h3>${crash.crash_date}</h3>
+                    <h3>${crash.human_address}</h3>
                     <hr>
                     <p>${crash.borough}</p>
                     <p>${crash.zip_code}</p>
-                    <p>${crash.incident_zip}</p>
-                    <hr>
                     <p>${crash.crash_time}</p>
+                    <hr>
+                    <p>${crash.crash_date}</p>
                     <hr>
                     <p>${crash.latitude}</p>
                 </div>`;
@@ -68,15 +68,15 @@ function searchzip(){
     let crash = data[i];
     if(crash.zip == zip){
       build += `<div class="fitted card">
-                    <h3>${crash.crash_date}</h3>
+                    <h3>${crash.human_address}</h3>
                     <hr>
                     <p>${crash.borough}</p>
                     <p>${crash.zip_code}</p>
-                    <p>${crash.incident_zip}</p>
-                    <hr>
                     <p>${crash.crash_time}</p>
                     <hr>
-                    <p>${crash.location}</p>
+                    <p>${crash.crash_date}</p>
+                    <hr>
+                    <p>${crash.latitude}</p>
                 </div>`;
       ct += 1;
     }
@@ -89,28 +89,27 @@ function searchzip(){
 
 // Challenge 4: Create an event handler (function) to filter the 311 Service Request by complaint type.
 
-function searchcollision(){
-  let collision = document.getElementById("collision").value;
+function searchBycrash(){
+  let crash = document.getElementById("crash").value;
   let output = document.getElementById("output");
   let result = document.getElementById("result");
 
   let build = "";
   let ct = 0;
 
-
   for(let i = 0; i < data.length; i+=1){
-    let collision = data[i];
-    if(collision.borough == borough){
+    let crash = data[i];
+    if(crash.borough == borough){
       build += `<div class="fitted card">
-                    <h3>${collision.crash_date}</h3>
+                    <h3>${crash.crash_date}</h3>
                     <hr>
-                    <p>${collision.borough}</p>
-                    <p>${collision.zip_code}</p>
-                    <p>${collision.incident_zip}</p>
+                    <p>${crash.borough}</p>
+                    <p>${crash.zip_code}</p>
+                    <p>${crash.crash_time}</p>
                     <hr>
-                    <p>${collision.crash_time}</p>
+                    <p>${crash.crash_date}</p>
                     <hr>
-                    <p>${collision.latitude}</p>
+                    <p>${crash.latitude}</p>
                 </div>`;
       ct += 1;
     }
