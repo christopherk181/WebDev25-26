@@ -21,7 +21,7 @@ function init(){
 
   //Challenge 6:  Pass the value b from challenge 4 to the bmiCategory() function and store in a variable bc.  Display the BMI category returned by bmiCategory().
  let bc = bmiCategory(b);
- display(`Based oon the BMI you are: ${bc}`);
+ display(`Based on the BMI you are: ${bc}`);
 
   
   //Challenge 8: Call lottery() with some number and display the results.
@@ -32,7 +32,8 @@ function init(){
 
 
   //Challenge 10: Create an array survey which contains several "Y" and "N" items. Pass this survey array to the function results( ) and display the value returned.
-
+let survey_results = ["Y","N","Y","N","Y","N","Y","N","Y","N"]
+ display(`survery_results: ${results(survey_results)}`);
   
 }
 
