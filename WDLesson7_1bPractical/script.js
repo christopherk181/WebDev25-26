@@ -12,15 +12,34 @@ async function init(){
   let ct = 0;
 
   //Challenge 2: Test the function card() developed in Challenge 1 by displaying only the first violation to the webpage.
-function violation(){
-  let violation = document.getElementById("traffic").value;
 
-}
 
   //Challenge 3: Display all the violations to the web page using the function card().
+for(let i=0; i < data.length; i++){
+  let violation = data[i];
+  build += card(violation);
+  ct++;
+}
 
- 
+  result.innerHTML = `${ct} Results found`;
   output.innerHTML = build;  
 }
 
 // Challenge 4: Create a function to filter the information and display only the cards that satisfy specfic condition(s).
+function filterByLicenseType(){
+  let type= get("lic_type").value; 
+  output = get("output");
+  result = get("result");
+  let build= "";
+  let ct = 0;
+
+  for(let i = 0; i < data.length; i+=1){
+    let violation = data[i];
+    if (type == violation .license_type){
+      build+= card(violation);
+      ct++;
+    }
+  }
+   result.innerHTML = `${ct} Results Found`;
+  output.innerHTML = build;  
+}
