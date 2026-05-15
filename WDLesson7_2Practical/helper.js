@@ -7,6 +7,21 @@ function get(id){
 function showMap(lat,lon){
   let location = [lat, lon];
 
+  if(!mapObj){
+      mapObj = L.map("map");
+  }
+  let map = map.Obj.setView(location, 14);
+
+  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}x{y}.png",{
+    maxZoom: 18
+    attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+  }).addTop(map);
+  let marker = L.marker(location).addTo(map);
+
+
+
+  }
+
 
 
 
@@ -15,14 +30,15 @@ function showMap(lat,lon){
 // Challenge 4: Create the function card() to generate an appropriate info card with the button to view map
 function card( info ){ 
    let build = `<div class="card fitted">
-                  <h3>${info.crash_date}</h3>
+                  <h3>${info.contributing_factoring_vehicle_1}</h3>
                   <hr>
-                  <p>Location: ${info.incident_address}</p>
+                  <p>Location: ${info.on_street_name}</p>
                   <h5>${info.borough}</h5>`;
+
                   if(info.latitude && info.longitude){
                     build += `<input type="button" value="Map" onclick="showMap( ${info.latitude}, ${info.longitude} )">`;
                   }
-    build +=    `</div>`;
+    build += `</div>`;
   return build;
 }
   
